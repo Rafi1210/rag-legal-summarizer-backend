@@ -1,27 +1,25 @@
 {
   "name": "rag-legal-summarizer-backend",
   "version": "1.0.0",
-  "description": "RAG Backend with Express, Firebase Auth, and Supabase",
+  "description": "Backend for RAG Legal Summarizer",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "start": "node index.js",
     "dev": "node --watch index.js",
-    "ingest": "node ingest.js"
+    "check-env": "node check-env.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@xenova/transformers": "^2.6.0",
-    "axios": "^1.6.2",
-    "cors": "^2.8.5",
-    "dotenv": "^16.6.1",
     "express": "^4.18.2",
-    "firebase-admin": "^12.0.0",
-    "pg": "^8.11.3"
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "firebase-admin": "^11.11.0"
   },
   "engines": {
     "node": ">=18.0.0"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "keywords": ["rag", "legal", "summarizer", "ai"],
+  "author": "Sadat Rafi",
+  "license": "MIT"
 }
