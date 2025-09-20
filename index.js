@@ -2,7 +2,8 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import { verifyToken } from './authMiddleware.js';
-import { askQuestion, getUserHistory, initializeDatabase } from './ragPipeline.js';
+import { askQuestion, getUserHistory } from './ragPipeline.js';
+import { initializeDatabase } from './dbClient.js';
 
 // Load environment variables
 dotenv.config();
@@ -21,6 +22,7 @@ async function startServer() {
     console.log('Database initialized successfully');
   } catch (error) {
     console.error('Failed to initialize database:', error);
+    console.error('Note: Make sure your Supabase database has the pgvector extension enabled');
     // Continue anyway - some functionality might still work
   }
 
